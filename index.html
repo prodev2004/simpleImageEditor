@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <!-- dont forget to link the CSS and JS -->
+    <!-- Source Code in the description -->
+    <title>Simple Image Editor / Part 2 - JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image_preview">
+            <!-- I'll use this image as an example but later we can upload any image we want to edit -->
+            <img>
+            <br>
+            <input type="file" id="uploadBtn" accept=".jpg, .png, .jpeg">
+            <!-- you can add other extensions also -->
+            <label for="uploadBtn">Upload Image</label>
+        </div>
+        <div class="filters">
+            <h2>Edit Your Image</h2>
+            <div class="form_group">
+                <!-- each one will have another textbox where you can write your the number you want -->
+                <label>Blur:</label>
+                <input type="range" value="0" max="100" class="range" data-filter="blur">
+                <input type="text" value="0" placeholder="Value" class="textbox" data-filter="blur">
+            </div>
+            <div class="form_group">
+                <label>Contrast:</label>
+                <input type="range" value="100" max="200" class="range" data-filter="contrast">
+                <input type="text" value="100" placeholder="Value" class="textbox" data-filter="contrast">
+            </div>
+            <div class="form_group">
+                <label>Hue-rotate:</label>
+                <input type="range" value="360" max="360" class="range" data-filter="hue-rotate">
+                <input type="text" value="360" placeholder="Value" class="textbox" data-filter="hue-rotate">
+            </div>
+            <div class="form_group">
+                <label>Sepia:</label>
+                <input type="range" value="0" max="100" class="range" data-filter="sepia">
+                <input type="text" value="0" placeholder="Value" class="textbox" data-filter="sepia">
+            </div>
+            <div class="form_group">
+                <div class="form__group">
+                    <input type="radio" name="flip" id="no_flip">
+                    <label for="no_flip">No Flip</label>
+                </div>
+                <div class="form__group">
+                    <input type="radio" name="flip" id="flip_horizontal">
+                    <label for="flip_horizontal">Flip Horizontal</label>
+                </div>
+                <div class="form__group">
+                    <input type="radio" name="flip" id="flip_vertical">
+                    <label for="flip_vertical">Flip Vertical</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- HTML and CSS is done... -->
+<!-- Next Part will be JS -->
+<!-- Check the latest video for part one where we create the HTML structure and stylings of this project. -->
